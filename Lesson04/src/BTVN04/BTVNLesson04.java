@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MyNumber {
+public class BTVNLesson04 {
+	class MyNumber{
 	public int number;
 
 //khởi tạo cho thuộc tính number
@@ -39,13 +40,12 @@ public class MyNumber {
 		ArrayList ListSole = Get_Sole();
 		ArrayList ListSotonghop = new ArrayList();
 		for(int i = 0; i <=ListSochan.size();i++) {
-			int SumIndex= i;
 			int sum = (int)ListSole.get(i) + (int) ListSochan.get(i);
 			ListSotonghop.add(sum);
 		}
 		return ListSotonghop;
 	}
-	
+	}
 	
 @Test
 public void Test_Get_Sochan() {
@@ -54,7 +54,7 @@ public void Test_Get_Sochan() {
 	MyNumber number = new MyNumber(n);
 
 	// action
-	ArrayList result = Get_Sochan();
+	ArrayList result = number.Get_Sochan();
 
 	// Assert
 	Assert.assertEquals(result.size(), 5);
@@ -69,7 +69,7 @@ public void Test_Get_Sole() {
 	MyNumber number = new MyNumber(n);
 
 	// action
-	ArrayList result = Get_Sole();
+	ArrayList result = number.Get_Sole();
 
 	// Assert
 	Assert.assertEquals(result.size(), 5);
@@ -85,9 +85,10 @@ public void Test_get_SoTongHop() {
 	MyNumber number = new MyNumber(n);
 
 	// action
-	ArrayList result = get_SoTongHop();
+	ArrayList result = number.get_SoTongHop(); 
 
 	// Assert
+	System.out.println(result);
 	Assert.assertEquals(result.size(), 5);
 	Assert.assertEquals(result.get(0), 1);
 	Assert.assertEquals(result.get(1), 5);
