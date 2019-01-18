@@ -48,7 +48,7 @@ public class BTVNLesson06_2 {
 		public ArrayList<Integer> GetDistanceMinMax() {
 		int[] MinMax = OrderList();
 		ArrayList<Integer> DistanceMinMax = new ArrayList<Integer>();
-		for (int i=1;i<MinMax.length-2;i++) {
+		for (int i=1;i<=MinMax.length-2;i++) {
 			DistanceMinMax.add(MinMax[i]);
 		}
 		return DistanceMinMax;
@@ -102,7 +102,10 @@ public class BTVNLesson06_2 {
 					// Action
 					 ArrayList<Integer> val = myNum.GetDistanceMinMax();
 					// Assertion
-					 Assert.assertEquals(2,val.get(0));
+					// for (int i = 0; i < val.size(); i++) {
+					//		System.out.println(val.get(i));
+					//	}
+					Assert.assertEquals(2,val.get(0));
 	}
 	}
 
