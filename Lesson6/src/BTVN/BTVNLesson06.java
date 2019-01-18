@@ -70,6 +70,9 @@ public class BTVNLesson06 {
 		}
 
 	}
+	public int GetTotal() {
+		
+	}
 
 	@Test
 	public void Test_GetMyNumber() {
