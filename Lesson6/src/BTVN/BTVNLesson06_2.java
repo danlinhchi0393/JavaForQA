@@ -36,76 +36,77 @@ public class BTVNLesson06_2 {
 			}
 			return ListNumber;
 		}
-		
+
 		public int GetMinNumber() {
 			int[] Min = OrderList();
 			return Min[0];
 		}
+
 		public int GetMaxNumber() {
 			int[] Max = OrderList();
-			return Max[Max.length-1];
+			return Max[Max.length - 1];
 		}
+
 		public ArrayList<Integer> GetDistanceMinMax() {
-		int[] MinMax = OrderList();
-		ArrayList<Integer> DistanceMinMax = new ArrayList<Integer>();
-		for (int i=1;i<=MinMax.length-2;i++) {
-			DistanceMinMax.add(MinMax[i]);
-		}
-		return DistanceMinMax;
-	}
-	}
-		/*@Test
-		public void Test_OrderList() {
-			// Arrange
-			int[] originalNumber = { 3, 2, 1 };
-
-			MyNumber iamahero = new MyNumber(originalNumber);
-
-			// Action
-			int[] val = iamahero.OrderList();
-
-			for (int i = 0; i < val.length; i++) {
-				System.out.println(val[i]);
+			int[] MinMax = OrderList();
+			ArrayList<Integer> DistanceMinMax = new ArrayList<Integer>();
+			for (int i = 1; i <= MinMax.length - 2; i++) {
+				DistanceMinMax.add(MinMax[i]);
 			}
-		}*/
+			return DistanceMinMax;
+		}
+	}
+
+	/*
+	 * @Test public void Test_OrderList() { // Arrange int[] originalNumber = { 3,
+	 * 2, 1 };
+	 * 
+	 * MyNumber iamahero = new MyNumber(originalNumber);
+	 * 
+	 * // Action int[] val = iamahero.OrderList();
+	 * 
+	 * for (int i = 0; i < val.length; i++) { System.out.println(val[i]); } }
+	 */
 	@Test
 	public void Test_GetMinNumber() {
 		// Arrange
-					int[] originalNumber = { 3, 2, 1 };
+		int[] originalNumber = { 3, 2, 1 };
 
-					MyNumber myNum = new MyNumber(originalNumber);
+		MyNumber myNum = new MyNumber(originalNumber);
 
-					// Action
-					 int val = myNum.GetMinNumber();
-					// Assertion
-					 Assert.assertEquals(1, val);
+		// Action
+		int val = myNum.GetMinNumber();
+		// Assertion
+		Assert.assertEquals(1, val);
 	}
+
 	@Test
 	public void Test_GetMaxNumber() {
 		// Arrange
-					int[] originalNumber = { 3, 2, 1 };
+		int[] originalNumber = { 3, 2, 1 };
 
-					MyNumber myNum = new MyNumber(originalNumber);
+		MyNumber myNum = new MyNumber(originalNumber);
 
-					// Action
-					 int val = myNum.GetMaxNumber();
-					// Assertion
-					 Assert.assertEquals(3, val);
+		// Action
+		int val = myNum.GetMaxNumber();
+		// Assertion
+		Assert.assertEquals(3, val);
 	}
+
 	@Test
 	public void Test_GetDistanceMinMax() {
 		// Arrange
-					int[] originalNumber = { 3, 2, 1 };
+		int[] originalNumber = { 3, 2, 1 };
 
-					MyNumber myNum = new MyNumber(originalNumber);
+		MyNumber myNum = new MyNumber(originalNumber);
 
-					// Action
-					 ArrayList<Integer> val = myNum.GetDistanceMinMax();
-					// Assertion
-					// for (int i = 0; i < val.size(); i++) {
-					//		System.out.println(val.get(i));
-					//	}
-					Assert.assertEquals(2,val.get(0));
+		// Action
+		ArrayList<Integer> val = myNum.GetDistanceMinMax();
+		// Assertion
+		// for (int i = 0; i < val.size(); i++) {
+		// System.out.println(val.get(i));
+		// }
+		int n = val.get(0);
+		Assert.assertEquals(2,n);
 	}
-	}
-
+}

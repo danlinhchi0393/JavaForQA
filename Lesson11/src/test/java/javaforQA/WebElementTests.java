@@ -10,7 +10,7 @@ import junit.framework.TestSuite;
 
 public class WebElementTests {
 	String[] tagArr = { "p", "a", "span", "button", "input", "table", "td", "tr" };
-
+ 
 	@Test
 	public void shouldAnswerWithTrue() {
 		Random rnd = new Random();
@@ -22,18 +22,31 @@ public class WebElementTests {
 			int randomIndex = rnd.nextInt(tagArr.length);
 			WebElement e = new WebElement();
 			e.Tag = tagArr[randomIndex];
+			e.Text = "Chi co vu Viet Nam Vo Dich";
 			lstElement.add(e);
 		}
 		
 		//Test
-		int count = 0;
-		for (WebElement sv : lstElement) {
-			if ((sv.equals("button")) || (sv.equals("p")) || (sv.equals("span"))) {
-				count = count+1;
-				System.out.println(count);
+		int countSpan = 0;
+		int countButton = 0;
+		int countP = 0;
+		for (WebElement el : lstElement) {
+			if (el.Tag.equals("button")) {
+				countP = countButton+1;	
+			}
+			else if (el.Tag.equalsIgnoreCase("span")) {
+				countSpan = countSpan+1;
+			}
+			else if ( el.Tag.equalsIgnoreCase("p")) {
+				countP = countP+1;
+			}
 				
+		}
+		System.out.println ("Button" + countButton + " Span" + countSpan + " p" + countP );
+		for (WebElement el : lstElement) {
+			if (el.getText().contains("Viet Nam Vo Dich")) {
+				System.out.println (el.Text);
 			}
 		}
-		
 	}
 }

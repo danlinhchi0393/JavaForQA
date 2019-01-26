@@ -21,9 +21,9 @@ public class Lesson09 {
 	}
 	public ArrayList<Integer> GetDupplicate() {
 		ArrayList<Integer> ArrayDupplicate = new ArrayList<Integer>();
-		for ( int i = 0; i<=FirstNumber.length;i++) {
+		for ( int i = 0; i<FirstNumber.length;i++) {
 			int curNum = FirstNumber[i];
-			for ( int j=0;j<=SecondNumber.length;j++) {
+			for ( int j=0;j<SecondNumber.length;j++) {
 				if (curNum == SecondNumber[j]) {
 					ArrayDupplicate.add(curNum);
 					break;

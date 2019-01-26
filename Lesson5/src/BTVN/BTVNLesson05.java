@@ -4,6 +4,30 @@ import java.util.ArrayList;
 
 import org.junit.Assert;
 import org.junit.Test;
+/*for ( int i = 0; i<20; i+=5)
+{
+// hanh động
+}
+
+while ( i <20) // kiem tra trc, thuc hien sau
+{
+//hành động
+i+=5
+}
+
+do
+{
+//Khối lệnh
+//có lệnh thay đổi đk lặp
+}
+while(dk lặp)
+
+//For làm viec với array
+forr ( object
+ * 
+ */
+
+
 
 /*
  * Viết class MyArray với các đặc điểm sau:

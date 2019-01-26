@@ -12,8 +12,8 @@ public class Lesson09Test {
 	@Test
 	public void Test_GetDupplicate() {
 		// Arrange
-				int[] fNumber = { 3, 2, 1 };
-				int[] sNumber = { 3, 2, 1 };
+				int[] fNumber = { 3,3,2,1,5,6,7,8 };
+				int[] sNumber = { 3,2,1,8 };
 				Lesson09 MyArray = new Lesson09(fNumber, sNumber);
 				// Action
 				ArrayList<Integer> val = MyArray.GetDupplicate();

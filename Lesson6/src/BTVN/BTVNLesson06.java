@@ -69,11 +69,30 @@ public class BTVNLesson06 {
 			return GetMyNumber;
 		}
 
-	}
+	
 	public int GetTotal() {
-		
+		ArrayList<Integer> GetMyNumber = new ArrayList<Integer>();
+		GetMyNumber = GetMyNumber();
+		int sum = 0;
+		for ( int i = 0;i<GetMyNumber.size();i++) {
+			if (GetMyNumber.get(i)%2==0) {
+				sum=sum+ GetMyNumber.get(i);
+			}
+		}
+		return sum;
 	}
-
+	public ArrayList<Integer>GetLuckyNumber(){
+		ArrayList<Integer> listPrimeNumbers = GetPrimeNumbers();
+		ArrayList<Integer> listLuckynumber = new ArrayList<Integer>();
+		for(int i=2; i < listPrimeNumbers.size();i++) {
+			if(listPrimeNumbers.get(i-1)+listPrimeNumbers.get(i-2)==listPrimeNumbers.get(i)) {
+				listLuckynumber.add(listPrimeNumbers.get(i));
+			}
+		}
+		return listLuckynumber;
+	}
+	
+	}
 	@Test
 	public void Test_GetMyNumber() {
 		// Arrange
