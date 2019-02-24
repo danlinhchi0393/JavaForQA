@@ -57,8 +57,9 @@ public class AppTest {
 		
 		boolean reusultCheckName = true;
 		for ( int i=0; i< listProduct.size(); i++ ) {
-			boolean checkName = listProduct.get(i).getText().toLowerCase().contains("giấy") ;
-			if (checkName = false) {
+		
+			if (!listProduct.get(i).getText().toLowerCase().contains("giấy")) {
+				reusultCheckName = false;
 				break;
 			}	
 		}
