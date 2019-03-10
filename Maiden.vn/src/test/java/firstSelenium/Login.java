@@ -18,7 +18,7 @@ import junit.framework.Assert;
 /**
  * Unit test for simple App.
  */
-public class AppTest {
+public class Login {
 	WebDriver driver;
 @Before
 	public void Loginform() throws InterruptedException {
